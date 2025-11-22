@@ -26,14 +26,11 @@
 <div id="text">Loading...</div>
 
 <script>
-  // GANTI dengan URL Worker kamu
   const api = "https://end-html.class-div.workers.dev/";
-
   fetch(api)
     .then(r => r.json())
     .then(d => {
-      if (!d.nama) return; // jika 403 → tidak tampil
-
+      if (!d.nama) return; 
       document.getElementById("bg").style.backgroundImage =
         `url('${d.background}')`;
 
